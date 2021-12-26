@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Karla&family=Mulish&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: karla;
+}
+:root {
+  --primary: #efcb3c;
+  --width-break: 600px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: karla;
+}
+
+nav {
+  background-color: var(--primary);
+  text-align: center;
+  font-size: x-large;
+  padding: 1rem;
+}
+
+main {
+  margin: auto;
+  padding: 1rem;
+  max-width: var(--width-break);
+}
+
+textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 20vh;
+  margin-top: 2rem;
+  font-size: large;
+  font-family: inherit;
+  border: 2px solid black;
+}
+
+button {
+  background-color: var(--primary);
+  border: none;
+  margin: 1rem 0rem;
+  padding: 1rem ;
+  font-family: karla;
+  font-size: large;
+}
+
+#output {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 20vh;
+  max-height: 30vh;
+  
+  border: 2px solid black;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary);
+  text-align: center;
+}
+
+footer p {
+  max-width: var(--width-break);
+  margin: auto;
+}
