@@ -5,6 +5,10 @@
   margin: 0px;
   font-family: karla;
 }
+
+body{
+  margin: 0;
+}
 :root {
   --primary: #efcb3c;
   --width-break: 600px;
