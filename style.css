@@ -1,26 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Karla&family=Mulish&display=swap");
 
+/* to remove default css setting */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pagewrap {
+  display: flex;
+  /*vertically stack children*/
+  flex-direction: column;
+
+  /* expand to take full height of page */
+  /* min-height overrides both height & max-height */
+  min-height: 100vh;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
   font-family: karla;
 }
 
-body{
-  margin: 0;
-}
 :root {
   --primary: #efcb3c;
-  --width-break: 600px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: karla;
 }
 
 nav {
@@ -31,9 +37,8 @@ nav {
 }
 
 main {
-  margin: auto;
+  flex-grow: 1;
   padding: 1rem;
-  max-width: var(--width-break);
 }
 
 textarea {
@@ -45,13 +50,14 @@ textarea {
   font-size: large;
   font-family: inherit;
   border: 2px solid black;
+  padding: 1rem;
 }
 
 button {
   background-color: var(--primary);
   border: none;
   margin: 1rem 0rem;
-  padding: 1rem ;
+  padding: 1rem;
   font-family: karla;
   font-size: large;
 }
@@ -61,12 +67,11 @@ button {
   width: 100%;
   min-height: 20vh;
   max-height: 30vh;
-  
+  padding: 1rem;
   border: 2px solid black;
 }
 
 footer {
-  position: relative;
   bottom: 0;
   width: 100%;
   padding: 1rem;
