@@ -13,7 +13,6 @@
   display: flex;
   /*vertically stack children*/
   flex-direction: column;
-
   /* expand to take full height of page */
   /* min-height overrides both height & max-height */
   min-height: 100vh;
@@ -28,6 +27,7 @@
 :root {
   --primary: #efcb3c;
 }
+
 
 nav {
   background-color: var(--primary);
