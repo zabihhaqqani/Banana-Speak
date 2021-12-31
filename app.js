@@ -6,6 +6,7 @@ let textOutput = document.querySelector("#output");
 // mock api for translating
 let serverURL = "https://api.funtranslations.com/translate/minion.json";
 
+//
 function getTranslationURL(input) {
   return serverURL + "?" + "text=" + input;
 }
@@ -13,7 +14,7 @@ function getTranslationURL(input) {
 // for displaying error if it occurs
 function errorHandler(error) {
   console.log("error occurred", error);
-  alert("something wrong with server ! try again after some time");
+  alert("Server Error, try again after some time");
 }
 
 // click handling
