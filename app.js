@@ -6,9 +6,9 @@ let textOutput = document.querySelector("#output");
 // mock api for translating
 let serverURL = "https://api.funtranslations.com/translate/minion.json";
 
-//
-function getTranslationURL(input) {
-  return serverURL + input;
+// parameters
+function getTranslationURL(text) {
+  return serverURL + "?" + "text=" + text
 }
 
 // for displaying error if it occurs
