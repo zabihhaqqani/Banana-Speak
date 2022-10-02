@@ -19,6 +19,9 @@ function errorHandler(error) {
 
 // click handling
 function clickHandler() {
+  if(textInput.value === ""){
+    textOutput.innerText = "Enter something..."
+  }else{
   let inputText = textInput.value; // taking input
   textOutput.innerText = "Translation in progress......................";
   // calling server for processing
@@ -28,7 +31,7 @@ function clickHandler() {
       var translatedText = json.contents.translated;
       textOutput.innerText = translatedText; // giving output
     })
-    .catch(errorHandler);
+    .catch(errorHandler);}
 }
 
 btnTranslate.addEventListener("click", clickHandler);
