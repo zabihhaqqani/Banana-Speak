@@ -38,14 +38,14 @@ nav {
 
 main {
   flex-grow: 1;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 textarea {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  min-height: 20vh;
+  min-height: 30vh;
   margin-top: 2rem;
   font-size: large;
   font-family: inherit;
@@ -69,26 +69,21 @@ button {
 
 button:hover {
   box-shadow: inset 150px 0 0 0 rgb(255, 0, 68);
-  outline: 2px solid black;
   color: aliceblue;
 }
-
-
-
-
 
 .btn-image {
   width: 25px;
   margin-right: 15px;
 }
 
-
 #output {
   box-sizing: border-box;
   width: 100%;
-  min-height: 20vh;
-  max-height: 30vh;
+  min-height: 30vh;
+  max-height: 35vh;
   padding: 1rem;
+  margin-top: 2rem;
   border: 2px solid black;
 }
 
@@ -166,5 +161,19 @@ footer p {
   }
   100%{
     transform:rotate(0);
+  }
+}
+
+@media screen and (min-width: 720px){
+  .translation{
+    display: flex;
+  }
+
+  .translation > div{
+    width: 100%;
+  }
+
+  .english{
+    margin-right: 2rem;
   }
 }
