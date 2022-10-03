@@ -80,11 +80,13 @@ button {
 }
 
 footer {
+  position: relative;
   bottom: 0;
   width: 100%;
   padding: 1rem;
   background-color: var(--primary);
   text-align: center;
+  overflow: hidden;
 }
 
 footer p {
@@ -92,3 +94,64 @@ footer p {
   margin: auto;
 }
 
+
+/* minion img style code */
+
+.minion-img {
+  transform: scale(1);
+  animation: minion-animation 5s infinite;
+}
+
+.minion-img-2 , .minion-img-3 {
+  position: absolute;
+  transform: scale(2) rotate(45deg);
+  animation: minion-animation-2 3s infinite;
+}
+
+.minion-img-3 {
+  transform: scale(2) rotate(-45deg);
+  animation: minion-animation-3 3s infinite;
+}
+
+@keyframes minion-animation-2 {
+  0%{
+    bottom: -10%;
+    left: -5%;
+  }
+  50%{
+    bottom: 5%;
+    left: 0;
+  }
+  100%{
+    bottom: -10%;
+    left: -5%;
+  }
+}
+
+@keyframes minion-animation-3 {
+  0%{
+    bottom: -10%;
+    right: -5%;
+  }
+  50%{
+    bottom: 5%;
+    right: 0;
+  }
+  100%{
+    bottom: -10%;
+    right: -5%;
+  }
+}
+
+
+@keyframes minion-animation {
+  0%{
+    transform:rotate(0);
+  }
+  50%{
+    transform:rotate(360deg);
+  }
+  100%{
+    transform:rotate(0);
+  }
+}
