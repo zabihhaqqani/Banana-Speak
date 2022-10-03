@@ -6,6 +6,9 @@ let textOutput = document.querySelector("#output");
 // mock api for translating
 let serverURL = "https://api.funtranslations.com/translate/minion.json";
 
+/* Current Year */
+document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+
 // parameters
 function getTranslationURL(text) {
   return serverURL + "?" + "text=" + text
@@ -23,7 +26,7 @@ function clickHandler() {
     textOutput.innerText = "Enter something..."
   }else{
   let inputText = textInput.value; // taking input
-  textOutput.innerText = "Translation in progress......................";
+  textOutput.innerText = "Translation in progress........";
   // calling server for processing
   fetch(getTranslationURL(inputText))
     .then((response) => response.json())

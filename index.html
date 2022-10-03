@@ -6,27 +6,43 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Banana Speak</title>
-	<link rel="stylesheet" href="./style.css" /> </head>
+	<link rel="stylesheet" href="assets/style/style.css" />
+	<link rel="icon" href="assets/img/minion.png" />
+</head>
 
 <body>
 	<div class="pagewrap">
 		<nav>
-			<h1>Minion Translator</h1> <img class="minion-img" src="./minion.png" alt="" height="50px" width="50px" /> </nav>
-		<main>
-			<textarea id="txt-input" placeholder="Enter your text here and click on translate it will be converted to minion language"></textarea>
-			<div class="container">
-				<button id="btn-translate"><img class="btn-image" src="./translation.png" alt="translation">  Translate</button>
+			<h1>Minion Translator</h1>
+			<img class="minion-img" src="assets/img/minion.png" alt="" height="50px" width="50px" />
+		</nav>
+		
+		<main class="translation">
+			<div class="english">
+				<h2>English</h2>
+				<textarea id="txt-input" placeholder="Enter your text here and click on translate it will be converted to minion language"></textarea>
+			
+				<div class="container">
+					<button id="btn-translate"><img class="btn-image" src="assets/img/translation.png" alt="translation">  Translate</button>
+				</div>
 			</div>
-			<div id="output"></div>
+
+			<div>
+				<h2>Minion</h2>
+				<div id="output"></div>
+			</div>
+			
 		</main>
 		<footer>
 			<div><strong> Fun fact</strong></div>
 			<p> Are you a fan of minions? Did you know that the gibberish they say is an actual language. </p>
-			<p style="padding-top: 0.5rem"><strong>Made by Zabih</strong></p>
-			<img class="minion-img-2" src="./minion.png" alt="" height="50px" width="50px" />
-			<img class="minion-img-3" src="./minion.png" alt="" height="50px" width="50px" />
+			<p style="padding-top: 1.5rem"><strong>Made by Zabih</strong></p>
+			<p id="currentYear"></p>
+
+			<img class="minion-img-2" src="assets/img/minion.png" alt="" height="50px" width="50px" />
+			<img class="minion-img-3" src="assets/img/minion.png" alt="" height="50px" width="50px" />
 		</footer>
-		<script src="./app.js   " type="text/javascript"></script>
+		<script src="assets/script/app.js" type="text/javascript"></script>
 	</div>
 </body>
 
