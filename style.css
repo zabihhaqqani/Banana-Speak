@@ -54,13 +54,21 @@ textarea {
 }
 
 button {
+  display: flex;
   background-color: var(--primary);
   border: none;
   margin: 1rem 0rem;
   padding: 1rem;
   font-family: karla;
   font-size: large;
+  cursor: pointer;
 }
+
+.btn-image {
+  width: 25px;
+  margin-right: 15px;
+}
+
 
 #output {
   box-sizing: border-box;
@@ -83,3 +91,4 @@ footer p {
   max-width: var(--width-break);
   margin: auto;
 }
+
