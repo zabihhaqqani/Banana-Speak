@@ -62,7 +62,20 @@ button {
   font-family: karla;
   font-size: large;
   cursor: pointer;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 0 #f65555;
+  transition: ease-in-out 0.5s;
 }
+
+button:hover {
+  box-shadow: inset 150px 0 0 0 rgb(255, 0, 68);
+  outline: 2px solid black;
+  color: aliceblue;
+}
+
+
+
+
 
 .btn-image {
   width: 25px;
