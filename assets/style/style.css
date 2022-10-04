@@ -36,9 +36,14 @@ nav {
   padding: 1rem;
 }
 
+nav-content{
+
+}
+
 main {
   flex-grow: 1;
   padding: 2rem;
+  background-color: var(--bg-main);
 }
 
 textarea {
@@ -49,8 +54,10 @@ textarea {
   margin-top: 2rem;
   font-size: large;
   font-family: inherit;
-  border: 2px solid black;
+  border: 2px solid ;
+  border-color: var(--border-color);
   padding: 1rem;
+  background-color: var(--bg-light)
 }
 
 button {
@@ -84,9 +91,14 @@ button:hover {
   max-height: 35vh;
   padding: 1rem;
   margin-top: 2rem;
-  border: 2px solid black;
+  border: 2px solid;
+  border-color: var(--border-color);
+  background-color: var(--bg-light);
 }
 
+.toggle{
+  float: right;
+}
 footer {
   position: relative;
   bottom: 0;
@@ -106,6 +118,8 @@ footer p {
 /* minion img style code */
 
 .minion-img {
+  position: relative;
+  left: 3rem;
   transform: scale(1);
   animation: minion-animation 5s infinite;
 }
@@ -176,4 +190,62 @@ footer p {
   .english{
     margin-right: 2rem;
   }
+}
+
+
+/* Light Dark Mode Toggle button */
+input[type = "checkbox"]{
+  -webkit-appearance: none;
+  position: relative;
+  width: 80px;
+  height:40px;
+  border-radius: 50px;
+  outline: none;
+  /* background-color: yellow; */
+  background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+  background-size: cover;
+}
+
+input[type = "checkbox"]::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px; 
+  background-color: var(--primary-dark);
+  border-radius: 50px;
+}
+
+input[type = "checkbox"]:checked:before{
+  transform: translate(100%);
+}
+
+input[type = "checkbox"]:checked{
+  background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+}
+
+/* variables */
+body{
+  --primary-dark: rgba(55, 65, 81 ,1);
+  --secondary-dark:rgba(32, 34, 37, 0.893);
+  --border-color: rgba(0, 0, 0, 0.932);
+  --bg-light: rgba(243, 244, 246,0.3);
+  --bg-main:rgba(241, 235, 235, 0);
+}
+
+body.dark{
+  --primary-dark:rgba(243, 244, 246,1);
+    --secondary-dark: rgba(243, 244, 246, 0.998);
+    --border-color: rgba(232, 223, 223, 0.939);
+    --bg-main:rgb(29, 8, 8);
+    --bg-light: rgba(19, 22, 24, 0.156);
+}
+
+.primary-dark{
+  color:var(--primary-dark);
+}
+
+.secondary-dark{
+  color:var(--secondary-dark);  
 }

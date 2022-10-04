@@ -8,19 +8,29 @@
 	<title>Banana Speak</title>
 	<link rel="stylesheet" href="assets/style/style.css" />
 	<link rel="icon" href="assets/img/minion.png" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 </head>
 
 <body>
 	<div class="pagewrap">
 		<nav>
-			<h1>Minion Translator</h1>
-			<img class="minion-img" src="assets/img/minion.png" alt="" height="50px" width="50px" />
+			<h1 class="text-center">Minion Translator</h1>
+			<div class="nav-content" >
+				<img class="minion-img" src="assets/img/minion.png" alt="" height="50px" width="50px" />
+				<input class="toggle" type="checkbox" id="mode">
+			</div>
+			
 		</nav>
+
+       
 		
-		<main class="translation">
+		
+		<main class="translation item primary-dark">
 			<div class="english">
 				<h2>English</h2>
-				<textarea id="txt-input" placeholder="Enter your text here and click on translate it will be converted to minion language"></textarea>
+				<textarea class="secondary-dark" id="txt-input" placeholder="Enter your text here and click on translate it will be converted to minion language"></textarea>
 			
 				<div class="container">
 					<button id="btn-translate"><img class="btn-image" src="assets/img/translation.png" alt="translation">  Translate</button>
@@ -29,7 +39,7 @@
 
 			<div>
 				<h2>Minion</h2>
-				<div id="output"></div>
+				<div class="secondary-dark" id="output"></div>
 			</div>
 			
 		</main>
