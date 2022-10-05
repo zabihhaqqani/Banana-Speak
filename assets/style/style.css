@@ -1,251 +1,257 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Karla&family=Mulish&display=swap");
 
 /* to remove default css setting */
+
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .pagewrap {
-  display: flex;
-  /*vertically stack children*/
-  flex-direction: column;
-  /* expand to take full height of page */
-  /* min-height overrides both height & max-height */
-  min-height: 100vh;
+    display: flex;
+    /*vertically stack children*/
+    flex-direction: column;
+    /* expand to take full height of page */
+    /* min-height overrides both height & max-height */
+    min-height: 100vh;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0px;
-  font-family: karla;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: karla;
 }
 
 :root {
-  --primary: #efcb3c;
+    --primary: #efcb3c;
 }
-
 
 nav {
-  background-color: var(--primary);
-  text-align: center;
-  font-size: x-large;
-  padding: 1rem;
+    background-color: var(--primary);
+    text-align: center;
+    font-size: x-large;
+    padding: 1rem;
 }
 
-nav-content{
-
-}
+nav-content {}
 
 main {
-  flex-grow: 1;
-  padding: 2rem;
-  background-color: var(--bg-main);
+    flex-grow: 1;
+    padding: 2rem;
+    /* background-color: var(--bg-main); */
 }
 
 textarea {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  min-height: 30vh;
-  margin-top: 2rem;
-  font-size: large;
-  font-family: inherit;
-  border: 2px solid ;
-  border-color: var(--border-color);
-  padding: 1rem;
-  background-color: var(--bg-light)
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-height: 30vh;
+    margin-top: 2rem;
+    font-size: large;
+    font-family: inherit;
+    border: 2px solid;
+    /* border-color: var(--border-color); */
+    padding: 1rem;
+    /* background-color: var(--bg-light) */
 }
 
 button {
-  display: flex;
-  background-color: var(--primary);
-  border: none;
-  margin: 1rem 0rem;
-  padding: 1rem;
-  font-family: karla;
-  font-size: large;
-  cursor: pointer;
-  border-radius: 6px;
-  box-shadow: inset 0 0 0 0 #f65555;
-  transition: ease-in-out 0.5s;
+    display: flex;
+    background-color: var(--primary);
+    border: none;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    font-family: karla;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 0 #f65555;
+    transition: ease-in-out 0.5s;
 }
 
 button:hover {
-  box-shadow: inset 150px 0 0 0 rgb(255, 0, 68);
-  color: aliceblue;
+    box-shadow: inset 150px 0 0 0 rgb(255, 0, 68);
+    color: aliceblue;
 }
 
 .btn-image {
-  width: 25px;
-  margin-right: 15px;
+    width: 25px;
+    margin-right: 15px;
 }
 
 #output {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 30vh;
-  max-height: 35vh;
-  padding: 1rem;
-  margin-top: 2rem;
-  border: 2px solid;
-  border-color: var(--border-color);
-  background-color: var(--bg-light);
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 30vh;
+    max-height: 35vh;
+    padding: 1rem;
+    margin-top: 2rem;
+    border: 2px solid;
+    border-color: var(--border-color);
+    background-color: var(--bg-light);
 }
 
-.toggle{
-  float: right;
+.toggle {
+    float: right;
 }
+
 footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem;
-  background-color: var(--primary);
-  text-align: center;
-  overflow: hidden;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary);
+    text-align: center;
+    overflow: hidden;
 }
 
 footer p {
-  max-width: var(--width-break);
-  margin: auto;
+    max-width: var(--width-break);
+    margin: auto;
+    font-family: cursive;
+    color: rgba(0, 0, 0, 0.585);
+}
+
+footer div {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
 /* minion img style code */
 
 .minion-img {
-  position: relative;
-  left: 3rem;
-  transform: scale(1);
-  animation: minion-animation 5s infinite;
+    position: relative;
+    left: 3rem;
+    transform: scale(1);
+    animation: minion-animation 5s infinite;
 }
 
-.minion-img-2 , .minion-img-3 {
-  position: absolute;
-  transform: scale(2) rotate(45deg);
-  animation: minion-animation-2 3s infinite;
+.minion-img-2,
+.minion-img-3 {
+    position: absolute;
+    transform: scale(2) rotate(45deg);
+    animation: minion-animation-2 3s infinite;
 }
 
 .minion-img-3 {
-  transform: scale(2) rotate(-45deg);
-  animation: minion-animation-3 3s infinite;
+    transform: scale(2) rotate(-45deg);
+    animation: minion-animation-3 3s infinite;
 }
 
 @keyframes minion-animation-2 {
-  0%{
-    bottom: -10%;
-    left: -5%;
-  }
-  50%{
-    bottom: 5%;
-    left: 0;
-  }
-  100%{
-    bottom: -10%;
-    left: -5%;
-  }
+    0% {
+        bottom: -10%;
+        left: -5%;
+    }
+    50% {
+        bottom: 5%;
+        left: 0;
+    }
+    100% {
+        bottom: -10%;
+        left: -5%;
+    }
 }
 
 @keyframes minion-animation-3 {
-  0%{
-    bottom: -10%;
-    right: -5%;
-  }
-  50%{
-    bottom: 5%;
-    right: 0;
-  }
-  100%{
-    bottom: -10%;
-    right: -5%;
-  }
+    0% {
+        bottom: -10%;
+        right: -5%;
+    }
+    50% {
+        bottom: 5%;
+        right: 0;
+    }
+    100% {
+        bottom: -10%;
+        right: -5%;
+    }
 }
-
 
 @keyframes minion-animation {
-  0%{
-    transform:rotate(0);
-  }
-  50%{
-    transform:rotate(360deg);
-  }
-  100%{
-    transform:rotate(0);
-  }
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
-@media screen and (min-width: 720px){
-  .translation{
-    display: flex;
-  }
-
-  .translation > div{
-    width: 100%;
-  }
-
-  .english{
-    margin-right: 2rem;
-  }
+@media screen and (min-width: 720px) {
+    .translation {
+        display: flex;
+    }
+    .translation>div {
+        width: 100%;
+    }
+    .english {
+        margin-right: 2rem;
+    }
 }
 
 
 /* Light Dark Mode Toggle button */
-input[type = "checkbox"]{
-  -webkit-appearance: none;
-  position: relative;
-  width: 80px;
-  height:40px;
-  border-radius: 50px;
-  outline: none;
-  /* background-color: yellow; */
-  background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
-  background-size: cover;
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    /* background-color: yellow; */
+    background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+    background-size: cover;
 }
 
-input[type = "checkbox"]::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40px;
-  width: 40px; 
-  background-color: var(--primary-dark);
-  border-radius: 50px;
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary-dark);
+    border-radius: 50px;
 }
 
-input[type = "checkbox"]:checked:before{
-  transform: translate(100%);
+input[type="checkbox"]:checked:before {
+    transform: translate(100%);
 }
 
-input[type = "checkbox"]:checked{
-  background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+input[type="checkbox"]:checked {
+    background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
 }
+
 
 /* variables */
-body{
-  --primary-dark: rgba(55, 65, 81 ,1);
-  --secondary-dark:rgba(32, 34, 37, 0.893);
-  --border-color: rgba(0, 0, 0, 0.932);
-  --bg-light: rgba(243, 244, 246,0.3);
-  --bg-main:rgba(241, 235, 235, 0);
+
+body {
+    --primary-dark: rgba(55, 65, 81, 1);
+    --secondary-dark: rgba(32, 34, 37, 0.893);
+    --border-color: rgba(0, 0, 0, 0.932);
+    --bg-light: rgba(243, 244, 246, 0.3);
+    --bg-main: rgba(241, 235, 235, 0);
 }
 
-body.dark{
-  --primary-dark:rgba(243, 244, 246,1);
+body.dark {
+    --primary-dark: rgba(243, 244, 246, 1);
     --secondary-dark: rgba(0, 0, 7, 0.998);
     --border-color: rgba(232, 223, 223, 0.939);
-    --bg-main:rgb(29, 8, 8);
+    --bg-main: rgb(29, 8, 8);
     --bg-light: rgb(227, 231, 234);
 }
 
-.primary-dark{
-  color:var(--primary-dark);
+.primary-dark {
+    color: var(--primary-dark);
 }
 
-.secondary-dark{
-  color:var(--secondary-dark);  
+.secondary-dark {
+    color: var(--secondary-dark);
 }
