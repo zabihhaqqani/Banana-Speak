@@ -31,6 +31,7 @@ function clickHandler() {
   } else {
     inp.style.display = 'none';
     loader.style.display = 'block';
+    out.classList.add('none');
     let inputText = textInput.value; // taking input
     textOutput.innerText = "Translation in progress........";
     fetch(getTranslationURL(inputText))
