@@ -236,10 +236,10 @@ body{
 
 body.dark{
   --primary-dark:rgba(243, 244, 246,1);
-    --secondary-dark: rgba(0, 0, 7, 0.998);
-    --border-color: rgba(232, 223, 223, 0.939);
+    --secondary-dark: rgba(240, 240, 240, 0.998);
+    --border-color: rgb(215, 215, 215);
     --bg-main:rgb(29, 8, 8);
-    --bg-light: rgb(227, 231, 234);
+    --bg-light: rgba(37, 37, 37, 0.633);
 }
 
 .primary-dark{
