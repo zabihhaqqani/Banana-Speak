@@ -3,7 +3,9 @@ let btnTranslate = document.querySelector("#btn-translate");
 let textInput = document.querySelector("#txt-input");
 let textOutput = document.querySelector("#output");
 const listenBtn = document.getElementById('btn-speak');
-
+const loader = document.querySelector('.loader');
+const inp = document.querySelector('.input');
+const out = document.querySelector('.output');
 // mock api for translating
 let serverURL = "https://api.funtranslations.com/translate/minion.json";
 
@@ -27,12 +29,17 @@ function clickHandler() {
   if (textInput.value === "") {
     textOutput.innerText = "Enter something..."
   } else {
+    inp.style.display = 'none';
+    loader.style.display = 'block';
+    out.classList.add('none');
     let inputText = textInput.value; // taking input
     textOutput.innerText = "Translation in progress........";
-    // calling server for processing
     fetch(getTranslationURL(inputText))
       .then((response) => response.json())
       .then((json) => {
+        inp.style.display = 'block';
+        loader.style.display = 'none';
+        out.classList.remove('none');
         translatedText = json.contents.translated;
         textOutput.innerText = translatedText; // giving output
       })
@@ -57,5 +64,5 @@ btnTranslate.addEventListener("click", clickHandler);
 let toggle = document.getElementById("mode");
 
 toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
+  document.body.classList.toggle('dark');
 })
