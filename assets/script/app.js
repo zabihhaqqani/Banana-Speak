@@ -18,8 +18,14 @@ function getTranslationURL(text) {
 // for displaying error if it occurs
 function errorHandler(error) {
   console.log("error occurred", error);
-  alert("Server Error, try again after some time");
+  swal({
+    
+    text: "Server Error, try again after some time",
+    icon: "warning",
+  });
+  // alert("Server Error, try again after some time");
 }
+
 
 // click handling
 var translatedText = "";
