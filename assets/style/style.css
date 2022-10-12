@@ -249,3 +249,15 @@ body.dark{
 .secondary-dark{
   color:var(--secondary-dark);  
 }
+
+/* footer logo */
+
+.footer-icon {
+  margin-top: 1.4rem;
+  color: #000000;
+}
+
+footer a{
+  text-decoration: none;
+  margin: 0.5rem;
+}
